@@ -1,4 +1,9 @@
 <?php
+# @Date:   2019-10-29T15:18:09+00:00
+# @Last modified time: 2019-10-30T00:21:26+00:00
+
+
+
 
 namespace App\Http\Controllers;
 
@@ -21,8 +26,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        $user = $request->user();
+        $home = 'user.home';
+
+        if ($user->hasRole('admin')){
+          $home = 'admin.home';
+        }
+        else{
+          $home = 'user.home';
+        }
+
+        return redirect()->route($home);
     }
 }
