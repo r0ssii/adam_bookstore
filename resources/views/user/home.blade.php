@@ -1,6 +1,6 @@
 @extends('layouts.app')
 # @Date:   2019-10-29T22:17:12+00:00
-# @Last modified time: 2019-10-29T22:26:26+00:00
+# @Last modified time: 2019-11-04T20:28:20+00:00
 
 
 
@@ -19,7 +19,7 @@
                         </div>
                     @endif
 
-                    You are logged in as an ordinary user!
+                    You are logged in as an ordinary user! <a href="{{route('user.books.index')}}"> Books </a>
                 </div>
             </div>
         </div>
