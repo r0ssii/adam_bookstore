@@ -19,7 +19,17 @@
                         </div>
                     @endif
 
-                    You are logged in as an ordinary user! <a href="{{route('user.books.index')}}"> Books </a>
+                    You are logged in as a patient! <a href="{{route('user.visits.index')}}"> Visits </a>
+
+
+                  </br>
+                  Hello {{ Auth::user()->name}}
+                </br>
+                Email: {{ Auth::user()->email}}
+              </br>
+              Phone: {{ Auth::user()->customer->phone }}
+            </br>
+            Address: {{ Auth::user()->customer->address }}
                 </div>
             </div>
         </div>

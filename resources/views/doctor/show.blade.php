@@ -11,40 +11,37 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="card">
           <div class="card-header">
-            Book: {{$book->title}}
+          Doctor: {{$doctor->name}}
           </div>
           <div class="card-body">
               <table class="table table-hover">
                 <tbody>
                   <tr>
-                    <td>Title</td>
-                    <td>{{$book->title}}</td>
+                    <td>Name</td>
+                    <td>{{$doctor->name}}</td>
                   </tr>
                   <tr>
-                    <td>Author</td>
-                    <td>{{$book->author}}</td>
+                    <td>Address</td>
+                    <td>{{$doctor->address}}</td>
                   </tr>
                   <tr>
-                    <td>Publisher</td>
-                    <td>{{$book->publisher}}</td>
+                    <td>Phone</td>
+                    <td>{{$doctor->phone}}</td>
                   </tr>
                   <tr>
-                    <td>Year</td>
-                    <td>{{$book->year}}</td>
+                    <td>Email</td>
+                    <td>{{$doctor->email}}</td>
                   </tr>
                   <tr>
-                    <td>ISBN</td>
-                    <td>{{$book->isbn}}</td>
+                    <td>Start Date</td>
+                    <td>{{$doctor->startdate}}</td>
                   </tr>
-                  <tr>
-                    <td>Price</td>
-                    <td>{{$book->price}}</td>
-                  </tr>
+
                 </tbody>
               </table>
-              <a href="{{route('admin.books.index')}}" class="btn btn-default">Back</a>
-              <a href="{{route('admin.books.edit', $book->id)}}" class="btn btn-warning">Edit</a>
-              <form style="display:inline-block" method="POST" action="{{route('admin.books.destroy', $book->id)}}">
+              <a href="{{route('admin.doctor.index')}}" class="btn btn-default">Back</a>
+              <a href="{{route('admin.doctor.edit', $doctor->id)}}" class="btn btn-warning">Edit</a>
+              <form style="display:inline-block" method="POST" action="{{route('admin.doctor.destroy', $doctor->id)}}">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <button type="submit" class="form-control btn btn-danger"> Delete</a>

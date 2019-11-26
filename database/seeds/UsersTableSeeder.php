@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-10-29T16:26:18+00:00
-# @Last modified time: 2019-10-29T21:53:23+00:00
+# @Last modified time: 2019-11-05T14:39:16+00:00
 
 
 
@@ -32,6 +32,34 @@ class UsersTableSeeder extends Seeder
         $user = new User();
         $user->name = 'John Jones';
         $user->email = 'JohnJ@bookstore.ie';
+        $user->password = bcrypt('secret');
+        $user->save();
+        $user->roles()->attach($role_user);
+
+        $user = new User();
+        $user->name = 'Mick manny';
+        $user->email = 'MickM@bookstore.ie';
+        $user->password = bcrypt('secret');
+        $user->save();
+        $user->roles()->attach($role_user);
+
+        $user = new User();
+        $user->name = 'Gay Boii';
+        $user->email = 'Gayb@bookstore.ie';
+        $user->password = bcrypt('secret');
+        $user->save();
+        $user->roles()->attach($role_user);
+
+        $user = new User();
+        $user->name = 'Harry Kane';
+        $user->email = 'HarryK@bookstore.ie';
+        $user->password = bcrypt('secret');
+        $user->save();
+        $user->roles()->attach($role_user);
+
+        $user = new User();
+        $user->name = 'Don juan';
+        $user->email = 'DonJ@bookstore.ie';
         $user->password = bcrypt('secret');
         $user->save();
         $user->roles()->attach($role_user);

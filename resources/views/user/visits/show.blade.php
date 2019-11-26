@@ -11,39 +11,39 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="card">
           <div class="card-header">
-            Book: {{$book->title}}
+            Visit: {{$book->title}}
           </div>
           <div class="card-body">
               <table class="table table-hover">
                 <tbody>
                   <tr>
-                    <td>Title</td>
-                    <td>{{$book->title}}</td>
+                    <td>Date</td>
+                    <td>{{$visit->date}}</td>
                   </tr>
                   <tr>
-                    <td>Author</td>
-                    <td>{{$book->author}}</td>
+                    <td>Time</td>
+                    <td>{{$visit->time}}</td>
                   </tr>
                   <tr>
-                    <td>Publisher</td>
-                    <td>{{$book->publisher}}</td>
+                    <td>Duration</td>
+                    <td>{{$visit->duration}}</td>
                   </tr>
                   <tr>
-                    <td>Year</td>
-                    <td>{{$book->year}}</td>
+                    <td>Patiant</td>
+                    <td>{{$visit->patiant}}</td>
                   </tr>
                   <tr>
-                    <td>ISBN</td>
-                    <td>{{$book->isbn}}</td>
+                    <td>Doctor</td>
+                    <td>{{$visit->doctor}}</td>
                   </tr>
                   <tr>
-                    <td>Price</td>
-                    <td>{{$book->price}}</td>
+                    <td>Cost</td>
+                    <td>{{$visit->cost}}</td>
                   </tr>
                 </tbody>
               </table>
 
-              <a href="{{route('user.books.index')}}" class="btn btn-default">Back</a>
+              <a href="{{route('user.visit.index')}}" class="btn btn-default">Back</a>
           </div>
         </div>
       </div>

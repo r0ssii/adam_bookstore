@@ -19,7 +19,11 @@
                         </div>
                     @endif
 
-                    You are logged in as an admin! <a href="{{route('admin.books.index')}}">Books</a>
+                    You are logged in as an admin!
+                     <a href="{{route('admin.patiant.index')}}">Patiants</a>
+                   </br>
+                   <a href="{{route('admin.doctor.index')}}">Doctors</a>
+                 </br>
 
                 </div>
             </div>

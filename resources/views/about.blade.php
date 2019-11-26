@@ -13,7 +13,9 @@
                 <div class="card-header">About Us</div>
 
                 <div class="card-body">
-                    This is the about page
+                    We are a Medical Center.
+                  </br>
+                   We keep track of your pescriptions and visits.
                 </div>
             </div>
         </div>

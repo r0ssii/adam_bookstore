@@ -9,7 +9,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBooksTable extends Migration
+class CreatePatiantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,14 +18,12 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::create('patiants', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('author');
-            $table->string('publisher');
-            $table->integer('year')->unsigned();
-            $table->string('isbn')->unique();
-            $table->decimal('price', 6, 2);
+            $table->string('Name');
+            $table->string('address');
+            $table->integer('phone');->unsigned();
+            $table->string('Start Date')->unique();
             $table->timestamps();
         });
     }
@@ -37,6 +35,6 @@ class CreateBooksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('books');
+        Schema::dropIfExists('patiants');
     }
 }
